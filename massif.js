@@ -35,10 +35,8 @@ const numbers = [
     console.log("Minimal:" + min);
     console.log("Maximum:" + max);
 
-    for (let i = 1; i <= 5; i++) {
-        let tree = "";
-        for (let r = 1; r <= i; r++) {
-            tree += "#";
-        }
+    let tree = "";
+    for (let i = 0; i < 5; i++) {
+        tree += "#";
         console.log(tree);
-    }
+      }
