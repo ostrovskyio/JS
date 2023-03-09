@@ -1,31 +1,36 @@
 let firstNumber;
 let secondNumber;
 
-firstNumber = prompt('Please, enter first number');
-secondNumber = prompt('Please, enter second number');
+firstNumber = +prompt('Please, enter first number');
+secondNumber = +prompt('Please, enter second number');
+
 
 function sum(firstNumber, secondNumber) {
-    if (typeof firstNumber !== "number" || typeof secondNumber !== "number") {
+    if (!isNaN(firstNumber) && (typeof firstNumber === "number") && !isNaN(secondNumber) && (typeof secondNumber === "number")) {
         return (firstNumber + '+' + secondNumber + '=' + (Number(firstNumber) + Number(secondNumber)));
     }
+    return('Error')
 }
 
 function min(firstNumber, secondNumber) {
-    if (typeof firstNumber !== "number" || typeof secondNumber !== "number") {
+    if (!isNaN(firstNumber) && (typeof firstNumber === "number") && !isNaN(secondNumber) && (typeof secondNumber === "number")) {
         return (firstNumber + '-' + secondNumber + '=' + (firstNumber - secondNumber));
     }
+    return('Error')
 }
 
 function mng(firstNumber, secondNumber) {
-    if (typeof firstNumber !== "number" || typeof secondNumber !== "number") {
+    if (!isNaN(firstNumber) && (typeof firstNumber === "number") && !isNaN(secondNumber) && (typeof secondNumber === "number")) {
         return (firstNumber + '*' + secondNumber + '=' + (firstNumber * secondNumber));
     }
+    return('Error')
 }
 
 function dil(firstNumber, secondNumber) {
-    if (typeof firstNumber !== "number" || typeof secondNumber !== "number") {
+    if (!isNaN(firstNumber) && (typeof firstNumber === "number") && !isNaN(secondNumber) && (typeof secondNumber === "number")) {
         return (firstNumber + '/' + secondNumber + '=' + (firstNumber / secondNumber));
     }
+    return('Error')
 }
 
 if ((firstNumber || secondNumber)==='') {
