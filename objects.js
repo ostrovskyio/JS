@@ -1,16 +1,16 @@
-// Перевірка на пустоту
+// Перевірка на пустотуs
+const check = {
 
-const check = {}
-
-function empty(object) {
-    for (let key in object) {
-        if (object.hasNoEmpty(key)) {
-            return false;
-        } 
+}
+function isEmpty(object) {
+   let keysArray =  Object.keys(object)
+   console.log(keysArray)
+    if(keysArray.length === 0) {
+        return false;
     }
     return true;
 }
-console.log(empty(check));
+console.log(isEmpty(check));
 
 // Обєкт з повідомленням
 
@@ -27,8 +27,6 @@ console.log(user.sayHello());
 // Калькулятор
 
 const calculator = {
-    num1: null,
-    num2: null,
     ask() {
         this.num1 = +prompt('Enter first number');
         this.num2 = +prompt('Enter second number');
