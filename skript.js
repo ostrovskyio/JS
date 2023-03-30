@@ -34,11 +34,13 @@ function dil(firstNumber, secondNumber) {
 }
 
 if ((firstNumber || secondNumber)==='') {
-    alert ('Error')
+    document.getElementById("results").innerHTML = 'Error'
 } 
 
 else if (secondNumber === 0) {
-    alert(`Your results:
+    document.getElementById("results").innerHTML =
+    
+    `Your results:
 
     ${sum(firstNumber, secondNumber)}
 
@@ -46,7 +48,7 @@ else if (secondNumber === 0) {
 
     ${mng(firstNumber, secondNumber)}
 
-    ${'Error'}`)
+    ${'Error'}`
 }
 
 else if (firstNumber < secondNumber) {
@@ -56,7 +58,9 @@ else if (firstNumber < secondNumber) {
         alert ('Canceled')
        }
        else {
-       alert(`Your results:
+        document.getElementById("results").innerHTML =
+        
+       `Your results:
     
        ${sum(firstNumber, secondNumber)}
        
@@ -64,11 +68,13 @@ else if (firstNumber < secondNumber) {
        
        ${mng(firstNumber, secondNumber)}
        
-       ${dil(firstNumber, secondNumber)}`)
+       ${dil(firstNumber, secondNumber)}`
     } 
 } 
 else {
-    alert(`Your results:
+    document.getElementById("results").innerHTML =
+    
+    `Your results:
     
     ${sum(firstNumber, secondNumber)}
        
@@ -76,6 +82,7 @@ else {
     
     ${mng(firstNumber, secondNumber)}
        
-    ${dil(firstNumber, secondNumber)}`)
+    ${dil(firstNumber, secondNumber)}`
 }
 
+alert = document.getElementById('results');
