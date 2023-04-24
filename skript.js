@@ -4,11 +4,11 @@ let secondNumber;
 firstNumber = prompt('Please, enter first number');
 secondNumber = prompt('Please, enter second number');
 
-if ((firstNumber || secondNumber)==='') {
+if ((firstNumber && secondNumber)==='') {
     alert ('Error')
 } 
 
-else if (secondNumber === 0) {
+else if (secondNumber !== 0) {
     alert(`Your results:
 
     ${firstNumber + '+' + secondNumber + '=' + (Number(firstNumber) + Number(secondNumber))}
