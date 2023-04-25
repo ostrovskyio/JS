@@ -8,13 +8,13 @@ function Accumulator(initialValue) {
     this.decrement = function() {
       this.value--;
     }
-    return this.value
   }
 
 const accumulator = new Accumulator(5);
-accumulator.increment();
-accumulator.decrement();
-console.log(accumulator.value);
+accumulator.increment(); //6
+accumulator.increment(); //7
+accumulator.decrement(); //6
+console.log(accumulator.value); //має вивести кінцеве значення 6
 
 
 function CancelableAccumulator(initialValue) {
@@ -23,8 +23,9 @@ function CancelableAccumulator(initialValue) {
         this.value = initialValue;
     }
 }
-const can = new CancelableAccumulator(3);
-can.increment();
-can.clear();
-can.decrement();
-console.log(can.value);
+const can = new CancelableAccumulator(5);
+can.increment(); //6
+can.increment(); //7
+can.decrement(); //6
+can.clear(); //5
+console.log(can.value); //має вивести 5
